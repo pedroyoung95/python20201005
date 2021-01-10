@@ -1,5 +1,7 @@
 class Unit:
-    # self는 객체 자신을 지칭하는 키워드, 메소드나 생성자의 파라미터로 꼭 들어가야 함
+    # self는 객체 자신을 지칭하는 키워드, 자기 자신의 요소(ex>필드)에 접근하기 위해 사용
+    # self가 붙은 파라미터는 그 이름의 객체의 변수가 되게 만듦(self가 안 붙은 건 파라미터)
+    #Python에서는 self키워드를 붙여서 필드로 선언해서 값을 할당하는 것
     def __init__(self, name, hp, damage):
         self.name = name
         self.hp = hp
