@@ -1,4 +1,5 @@
 class Unit:
+    # self는 객체 자신을 지칭하는 키워드, 메소드나 생성자의 파라미터로 꼭 들어가야 함
     def __init__(self, name, hp, damage):
         self.name = name
         self.hp = hp
