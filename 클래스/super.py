@@ -41,9 +41,9 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         print("[공중 유닛 이동]")
         self.fly(self.name, location)
 
-vulture = AttackUnit("벌쳐", 80, 10, 20)
-battlecruiser = FlyableAttackUnit("배틀크루저", 500, 25, 3)
-
-vulture.move("11시")
-# battlecruiser.fly(battlecruiser.name, "9시")
-battlecruiser.move("9시")
+class BuildingUnit(Unit):
+    def __init__(self, name, hp, location):
+        # Unit.__init__(self, name, hp, 0)
+        super().__init__(name, hp, 0)
+        #super()를 하면 상위 클래스의 메소드의 필드(프로퍼티)를 상속받음(단, self는 적지 않음)
+        self.location = location

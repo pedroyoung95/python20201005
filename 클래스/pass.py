@@ -41,9 +41,19 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         print("[공중 유닛 이동]")
         self.fly(self.name, location)
 
-vulture = AttackUnit("벌쳐", 80, 10, 20)
-battlecruiser = FlyableAttackUnit("배틀크루저", 500, 25, 3)
+class BuildingUnit(Unit):
+    def __init__(self, name, hp, location):
+        pass #아무것도 안 하고 넘어간다는 키워드
 
-vulture.move("11시")
-# battlecruiser.fly(battlecruiser.name, "9시")
-battlecruiser.move("9시")
+supply_depot = BuildingUnit("서플라이 디폿", 500 ,"7시")
+
+def game_start():
+    print("[알림] 새로운 게임을 시작합니다.")
+
+def game_over():
+    pass
+
+game_start()
+game_over()
+
+
